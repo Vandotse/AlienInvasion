@@ -22,11 +22,9 @@ body {
   background: #231F20;
   display: block;
   margin: 0;
-  aspect-ratio: 768 / 1024;
-  width: min(768px, 100vw);
-  height: min(1024px, 100vh);
-  max-width: 100vw;
-  max-height: 100vh;
+  aspect-ratio: 3 / 4;
+  width: min(768px, calc(100vh * 0.75), 100vw);
+  height: min(1024px, calc(100vw * 1.333333), 100vh);
 }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform:
 translate(-50%, -50%); display: none }
