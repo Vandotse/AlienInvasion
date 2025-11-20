@@ -1,19 +1,32 @@
 body {
-padding: 0;
-margin: 0;
-background: black;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#unity-container { position: fixed; width: 100%; height: 100%; }
+
+#unity-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 #unity-canvas {
-width: 1024px;
-height: 768px;
-background: #231F20;
-display: block;
-margin: 0 auto;
+  background: #231F20;
+  display: block;
+  margin: 0;
+  aspect-ratio: 768 / 1024;
+  width: min(768px, 100vw);
+  height: min(1024px, 100vh);
+  max-width: 100vw;
+  max-height: 100vh;
 }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform:
 translate(-50%, -50%); display: none }
